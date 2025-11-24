@@ -1,27 +1,25 @@
+# Stage 1: Build React app
 FROM node:18-alpine AS build
 
-# Create working directory
 WORKDIR /saviti_saviti_final_site
 
-# Copy package.json and lock files first
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install --force
 
-# Copy remaining source code
 COPY . .
-
-# Build production build
 RUN npm run build
 
+# Stage 2: Serve with NGINX
 FROM nginx:alpine
 
-# Copy build output to Nginx HTML directory
+# Copy custom NGINX config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy build output
 COPY --from=build /saviti_saviti_final_site/build /usr/share/nginx/html
 
-# Expose port 5575
+# Expose the same port as in nginx.conf
 EXPOSE 5575
 
-# Start NGINX server
+# Start NGINX
 CMD ["nginx", "-g", "daemon off;"]
