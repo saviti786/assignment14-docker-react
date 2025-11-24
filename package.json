@@ -22,7 +22,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint . --ext .ts,.tsx --report-unused-disable-directives",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier . --write",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +47,21 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.36"
+    "@eslint/js": "^9.39.1",
+    "@types/styled-components": "^5.1.36",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "typescript-eslint": "^8.47.0"
+  },
+  "lint-staged": {
+  "*.{ts,tsx,js,jsx}": ["eslint --fix"],
+  "*.{ts,tsx,js,jsx,css,md}": ["prettier --write"]
   }
+
 }

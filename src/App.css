@@ -162,3 +162,8 @@ nav a:hover {
   margin-top: 1rem;
 }
 
+.workcard {
+  display: flex;
+  justify-content: center;
+}
+

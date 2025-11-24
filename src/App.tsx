@@ -51,7 +51,7 @@ function App() {
       title={w.title}
       content={w.description}
       image={w.image}
-      className="card"
+      className="card workcard"
     />
     <Table className="table" headers={["Tech"]} data={w.tech.map((t) => [t])} />
   </div>
@@ -67,7 +67,7 @@ function App() {
         <Card
           title="Languages / Frameworks"
           content=""
-          className="card"
+          className="card workcard"
         />
         <Table className="table" headers={["Name"]} data={skills.languagesFrameworks.map(lf => [lf])} />
 
@@ -128,9 +128,9 @@ function App() {
           content=""
         />
         <Table
-  headers={["Title", "Link"]}
-  data={developerSetup.supportLinks.map(r => [r.title, r.link])}
-/>
+        headers={["Title", "Link"]}
+        data={developerSetup.supportLinks.map(r => [r.title, r.link])}
+        />
 
       </section>
     </div>

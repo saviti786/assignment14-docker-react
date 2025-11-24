@@ -7,12 +7,14 @@ const StyledTable = styled.table<{ $disabled?: boolean }>`
   border-collapse: collapse;
   opacity: ${(props) => (props.$disabled ? 0.6 : 1)};
   cursor: ${(props) => (props.$disabled ? "not-allowed" : "default")};
+  margin-bottom: 20px;
+  background-color: #675e5eff;
 `;
 
 const Th = styled.th`
-  background-color: #f4f4f4;
+  background-color: #1c1a1aff;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #131111ff;
   text-align: left;
 `;
 
@@ -22,7 +24,7 @@ const Td = styled.td`
 `;
 
 const Tfoot = styled.tfoot`
-  background-color: #fafafa;
+  background-color: #0c0c0cff;
   font-weight: bold;
 `;
 
