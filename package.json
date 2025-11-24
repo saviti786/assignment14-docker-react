@@ -28,7 +28,7 @@
     "format": "prettier . --write",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-  "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
