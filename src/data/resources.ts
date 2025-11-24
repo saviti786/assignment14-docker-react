@@ -1,13 +1,13 @@
 export const resources = [
   {
     title: 'How to Build a Portfolio Website with React',
-    image: '/images/',
+    image: '/images/portfolio.jpg',
     summary: 'Step‑by‑step guide to building and deploying a React portfolio.',
     link: 'https://www.freecodecamp.org/news/build-portfolio-website-react/',
   },
   {
     title: 'Portfolio tutorial in React',
-    image: '/images/',
+    image: '/images/react.jpg',
     summary: 'Example portfolio structure and implementation in React.',
     link: 'https://www.geeksforgeeks.org/reactjs/portfolio-webpage-using-react/',
   },
