@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { RadioButtonProps } from "./RadioButton.types";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { RadioButtonProps } from './RadioButton.types';
 
 const StyledLabel = styled.label<{ $disabled?: boolean }>`
   display: flex;
   align-items: center;
-  cursor: ${(props) => (props.$disabled ? "not-allowed" : "pointer")};
+  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'pointer')};
   opacity: ${(props) => (props.$disabled ? 0.6 : 1)};
   font-size: 1rem;
 `;

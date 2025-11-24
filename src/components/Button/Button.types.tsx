@@ -5,4 +5,3 @@ export interface ButtonProps {
   backgroundColor?: string;
   className?: string;
 }
-

@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { CardProps } from "./Card.types";
+import React from 'react';
+import styled from 'styled-components';
+import { CardProps } from './Card.types';
 
 const StyledCard = styled.div<{ $disabled?: boolean }>`
   width: 100%;
@@ -12,10 +12,10 @@ const StyledCard = styled.div<{ $disabled?: boolean }>`
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
   opacity: ${(props) => (props.$disabled ? 0.6 : 1)};
-  cursor: ${(props) => (props.$disabled ? "not-allowed" : "pointer")};
+  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'pointer')};
 
   &:hover {
-    transform: ${(props) => (props.$disabled ? "none" : "translateY(-4px)")};
+    transform: ${(props) => (props.$disabled ? 'none' : 'translateY(-4px)')};
   }
 `;
 
@@ -47,14 +47,14 @@ export const Card: React.FC<CardProps> = ({
   disabled = false,
 }) => {
   return (
-    <div className={className || "card"}>
-    <StyledCard $disabled={disabled} data-testid="card">
-      {image && <Image src={image} alt={title} />}
-      <Content>
-        <Title>{title}</Title>
-        <Text>{content}</Text>
-      </Content>
-    </StyledCard>
+    <div className={className || 'card'}>
+      <StyledCard $disabled={disabled} data-testid="card">
+        {image && <Image src={image} alt={title} />}
+        <Content>
+          <Title>{title}</Title>
+          <Text>{content}</Text>
+        </Content>
+      </StyledCard>
     </div>
   );
 };
